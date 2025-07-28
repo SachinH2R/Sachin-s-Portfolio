@@ -1,100 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sachin Jangid | Cybersecurity Engineer</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin's Portfolio</title>
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-black">
 
-  <!-- Matrix Binary Background -->
-  <canvas id="matrixCanvas"></canvas>
+    <!-- The canvas for the Matrix rain effect -->
+    <canvas id="matrix-canvas"></canvas>
 
-  <!-- NAVIGATION -->
-  <header class="top-nav">
-    <div class="menu-item"><i class="fas fa-user"></i> Profile</div>
-    <div class="menu-item"><i class="fas fa-briefcase"></i> Services</div>
-    <div class="menu-item"><i class="fas fa-blog"></i> Blogs</div>
-    <div class="menu-item"><i class="fas fa-envelope"></i> Contact</div>
-  </header>
+    <!-- Header and Navigation -->
+    <header class="bg-black/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-center items-center">
+            <div class="hidden md:flex space-x-8">
+                <a href="#profile" class="text-gray-300 hover:text-red-500 transition-colors">PROFILE</a>
+                <a href="#experience" class="text-gray-300 hover:text-red-500 transition-colors">EXPERIENCE</a>
+                <a href="#skills" class="text-gray-300 hover:text-red-500 transition-colors">SKILLS</a>
+                <a href="#contact" class="text-gray-300 hover:text-red-500 transition-colors">CONTACT</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white absolute right-6 top-4">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#profile" class="block text-center py-2 px-4 text-sm hover:bg-red-500/20">PROFILE</a>
+            <a href="#experience" class="block text-center py-2 px-4 text-sm hover:bg-red-500/20">EXPERIENCE</a>
+            <a href="#skills" class="block text-center py-2 px-4 text-sm hover:bg-red-500/20">SKILLS</a>
+            <a href="#contact" class="block text-center py-2 px-4 text-sm hover:bg-red-500/20">CONTACT</a>
+        </div>
+    </header>
 
-  <!-- MAIN CONTENT -->
-  <div class="main-container">
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 pt-24">
+        <!-- Top two-column grid -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+            
+            <!-- Left Column -->
+            <div class="md:col-span-3 space-y-8">
+                <section id="profile" class="neon-box">
+                    <h2 class="text-2xl text-red-500 mb-4">Hi! I'm Sachin Jangid</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        I am an experienced and dedicated Web Security Engineer with a passion for ensuring the safety and integrity of web applications. With a strong background in cybersecurity and a keen eye for identifying vulnerabilities, I am committed to protecting sensitive data and preventing unauthorized access. I constantly stay updated with the latest security trends and best practices to provide reliable solutions and enhance the overall security posture of organizations.
+                    </p>
+                </section>
+
+                <section id="education" class="neon-box">
+                    <h3 class="text-xl text-red-500 mb-4">Education</h3>
+                    <ul class="custom-list text-gray-300">
+                        <li>Bachelor of Science in Information Technology, SKIT Jaipur, Rajasthan, 2024</li>
+                        <li>Certified Ethical Hacker (CEH), Coursera, 2024</li>
+                        <li>CISSP, OSCP, Hackcore Course, 2024</li>
+                    </ul>
+                </section>
+
+                <section id="experience" class="neon-box">
+                    <h3 class="text-xl text-red-500 mb-4">Experience</h3>
+                    <ul class="custom-list text-gray-300">
+                        <li>Web Security Engineer, Zoom Inc, June 2019 - Present</li>
+                        <li>Web Security Analyst, Amazon Inc, March 2017 - May 2019</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="md:col-span-2 space-y-8">
+                <section id="skills" class="neon-box">
+                    <h3 class="text-xl text-red-500 mb-4">Skills</h3>
+                    <div class="space-y-4">
+                        <!-- Skill items -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span>Web Application Security</span>
+                                <span class="text-red-500">90%</span>
+                            </div>
+                            <div class="skill-bar-container"><div class="skill-bar" style="width: 90%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span>Security Architecture Design</span>
+                                <span class="text-red-500">80%</span>
+                            </div>
+                            <div class="skill-bar-container"><div class="skill-bar" style="width: 80%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span>Threat Modeling</span>
+                                 <span class="text-red-500">76%</span>
+                            </div>
+                            <div class="skill-bar-container"><div class="skill-bar" style="width: 76%;"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span>Incident Response & Management</span>
+                                <span class="text-red-500">85%</span>
+                            </div>
+                            <div class="skill-bar-container"><div class="skill-bar" style="width: 85%;"></div></div>
+                        </div>
+                         <div>
+                            <div class="flex justify-between items-center mb-1 text-sm">
+                                <span>Secure Coding Practices</span>
+                                <span class="text-red-500">98%</span>
+                            </div>
+                            <div class="skill-bar-container"><div class="skill-bar" style="width: 98%;"></div></div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Download Sections -->
+                <section id="downloads" class="space-y-8">
+                    <div class="terminal-box">
+<pre class="file-tree">images/
+  ├── Wallpaper1.jpg
+  ├── Wallpaper2.jpg
+  └── Documents/Report.pdf</pre>
+                        <a href="#" class="action-button">Download Data</a>
+                    </div>
+                     <div class="terminal-box">
+<pre class="file-tree">files/
+  ├── Documents/Resume.pdf
+  └── Documents/CV.pdf</pre>
+                        <a href="#" class="action-button">Download Resume</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Centered Sections -->
+        <div class="mt-12 space-y-12 flex flex-col items-center">
+            <section id="social" class="w-full max-w-md text-center">
+                <h3 class="text-xl text-red-500 mb-4">Social Media</h3>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="w-10 h-10 border border-red-500 flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-black transition-colors"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="w-10 h-10 border border-red-500 flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-black transition-colors">
+                        <!-- SVG for the X logo -->
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.6.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-red-500 flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-black transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 border border-red-500 flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-black transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </section>
+            
+            <section id="contact" class="neon-box w-full max-w-lg">
+                <h3 class="text-xl text-red-500 mb-4 text-center">Contact Me</h3>
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-400 mb-2">Name:</label>
+                        <input type="text" id="name" name="name" class="contact-input" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="contact-info" class="block text-gray-400 mb-2">Contact (Email/Phone):</label>
+                        <input type="text" id="contact-info" name="contact-info" class="contact-input" required>
+                    </div>
+                     <div class="mb-6">
+                        <label for="description" class="block text-gray-400 mb-2">Description:</label>
+                        <textarea id="description" name="description" rows="4" class="contact-input"></textarea>
+                    </div>
+                    <button type="submit" class="action-button w-full !mt-0">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
     
-    <!-- LEFT SIDE -->
-    <div class="left-panel">
-      <h2 class="highlight">Hi! I'm Sachin Jangid</h2>
-      <p>
-        I am an experienced and dedicated Web Security Engineer with a passion for ensuring the safety and integrity of web applications.
-        With a strong background in cybersecurity and a keen eye for identifying vulnerabilities, I am committed to protecting sensitive data and preventing unauthorized access.
-        I constantly stay updated with the latest security trends and best practices to provide reliable solutions and enhance the overall security posture of organizations.
-      </p>
-
-      <h3 class="highlight">Education</h3>
-      <ul class="edu-list">
-        <li><span class="dot"></span> Bachelor of Science in Information Technology, SKIT Jaipur,Rajasthan, 2022</li>
-        <li><span class="dot"></span> Certified Ethical Hacker (CEH), Coursera, 2024</li>
-        <li><span class="dot"></span> CISSP,oscp, Hackcore Course, 2024</li>
-      </ul>
-
-      <h3 class="highlight">Experience</h3>
-      <ul class="edu-list">
-        <li><span class="dot"></span> Web Security Engineer, Zoom Inc, June 2019 – Present</li>
-        <li><span class="dot"></span> Web Security Analyst, Amazon Inc, March 2017 – May 2019</li>
-      </ul>
+    <!-- Modal for messages -->
+    <div id="message-modal" class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+        <div class="modal-content neon-box text-center">
+            <p id="modal-message" class="text-lg"></p>
+            <button id="close-modal" class="action-button mt-6">Close</button>
+        </div>
     </div>
+    
+    <!-- Your personal Firebase configuration -->
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBsVYSOIPg1jeFV4rxNbeAd54DZt71GCIg",
+        authDomain: "sachinportfolio-f3336.firebaseapp.com",
+        projectId: "sachinportfolio-f3336",
+        storageBucket: "sachinportfolio-f3336.appspot.com",
+        messagingSenderId: "472716805464",
+        appId: "1:472716805464:web:96a36c3eb975d227ea512d",
+        measurementId: "G-33WGHJBBBG"
+      };
+      window.__firebase_config_dev = firebaseConfig;
+    </script>
 
-    <!-- RIGHT SIDE -->
-    <div class="right-panel">
-      <h3 class="highlight">Skills</h3>
-      <div class="skill">Web Application Security <span>80%</span>
-        <div class="progress"><div style="width:80%"></div></div>
-      </div>
-      <div class="skill">Security Architecture Design <span>92%</span>
-        <div class="progress"><div style="width:92%"></div></div>
-      </div>
-      <div class="skill">Threat Modeling <span>76%</span>
-        <div class="progress"><div style="width:76%"></div></div>
-      </div>
-      <div class="skill">Incident Response & Management <span>85%</span>
-        <div class="progress"><div style="width:85%"></div></div>
-      </div>
-      <div class="skill">Secure Coding Practices <span>98%</span>
-        <div class="progress"><div style="width:98%"></div></div>
-      </div>
-
-      <h3 class="highlight">Social Media</h3>
-      <div class="social-buttons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-
-      <!-- TERMINAL BOX -->
-      <div class="terminal-box">
-        <p>images/</p>
-        <p>&nbsp; ├── Wallpaper1.jpg</p>
-        <p>&nbsp; ├── Wallpaper2.jpg</p>
-        <p>&nbsp; └── Documents/Report.pdf</p>
-        <button class="download-btn">Download Data</button>
-      </div>
-      <div class="terminal-box">
-  <p>files/</p>
-  <p>&nbsp; ├── <a href="images/wallpaper1.jpg" download>Wallpaper1.jpg</a></p>
-  <p>&nbsp; ├── <a href="images/wallpaper2.jpg" download>Wallpaper2.jpg</a></p>
-  <p>&nbsp; └── <a href="documents/sachin_resume.pdf" download>Resume.pdf</a></p>
-  <a href="documents/sachin_resume.pdf" download>
-    <button class="download-btn">Download Resume</button>
-  </a>
-</div>
-
-    </div>
-
-  </div>
-
-  <script src="matrix-bg.js"></script>
+    <!-- Link to your external JS file -->
+    <script src="script.js" type="module"></script>
 </body>
 </html>
+
